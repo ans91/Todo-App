@@ -1,0 +1,125 @@
+
+.Flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainbox {
+    flex-direction: column;
+    width: "34rem";
+        margin-top: "3rem",
+}
+
+.headOne {
+    color: white;
+    letter-spacing: 1.0rem;
+    font-size: 2.5rem;
+}
+
+.inputBox {
+    width: 100%;
+    background-color: #25273c;
+    border: none;
+    outline: none;
+    color: lightgray;
+    font-size: 1rem;
+}
+
+.round {
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: linear-gradient(to bottom right, rgb(87, 209, 218), rgb(169, 89, 194));
+  border-radius: 50%;
+  /* border:1rem */
+}
+
+.roundPlane {
+    display: flex;
+    width: 1.0rem;
+    height: 1.0rem;
+    border-radius: 50%;
+    background-color: #25273c;
+    border: solid;
+    border-color: #484a5f;
+    border-width: 0.15rem;
+    
+}
+
+.roundPlane:hover {
+    width: 1.0rem;
+    height: 1.0rem;
+    background: linear-gradient(rgb(7, 5, 5), black) padding-box,
+    linear-gradient(to bottom right, rgb(87, 209, 218), rgb(169, 89, 194)) border-box;
+    border-radius: 50%;
+    border: 0.15rem solid transparent;
+    /* border-color: rgb(21, 21, 201); */
+    /* border-color: linear-gradient(to bottom right, rgb(87, 209, 218), rgb(169, 89, 194)); */
+}
+
+.todoList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.todoList:hover .todoBox {
+    width: 1.0rem;
+    height: 1.0rem;
+    background-image: url("../public/img/icon-cross.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.3rem;
+    background-color: #25273c;
+    border: none;
+    
+    /* color: lightgray; */
+    /* background-repeat: no-repeat; */
+}
+/* .myDIV:hover + .hide */
+.lef{
+    width: 100%;
+}
+
+.lef:hover > div {
+    background-color: aqua;
+}
+
+.statbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width : 100%;
+    color: #595a77;
+    border-top: 0.05rem solid;
+    flex-wrap: wrap;
+    border-color: "#484a5f";
+}
+
+.statbox > div {
+    padding: 1rem;
+}
+
+.statbox > div:hover:nth-child(1){
+    color: white;
+}
+
+.statbox > div:hover:nth-child(3){
+    color: white;
+}
+
+.statbox > div:nth-child(2){
+    display: flex;
+    flex-direction: row;
+    gap : 1rem;
+}
+
+.mbox > div:hover {
+    color: white;
+}
+
+
