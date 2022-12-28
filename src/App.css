@@ -1,6 +1,6 @@
 html,body{
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 100%;
+  font-size: 65%;
 }
 
 
@@ -16,7 +16,16 @@ html,body{
 }
 @media screen and (max-width: 560px) {
   html,body{
-    font-size: 65%;
+    font-size: 50%;
   }
+
+  .mainBody {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  /* .mainbox{
+    
+  } */
 }
   

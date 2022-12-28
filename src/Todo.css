@@ -7,15 +7,57 @@
 }
 
 .mainbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    width: "34rem";
-        margin-top: "3rem",
+    width: 55rem;
+    margin-top: 4rem;
+}
+
+.middleBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40rem;
+    background-color: #25273c;
+    margin-top: 1.8rem;
+    position: relative;
+    overflow: hidden;
+    
+    /* flexDirection: "column",
+          width: "100%",
+          height: "40rem",
+          backgroundColor: "#25273c",
+          // backgroundColor: "green",
+          marginTop: "1.8rem",
+          // alignItems: "flex-start", */
+}
+
+.middleBox > div:nth-child(1) {
+    max-height: 36rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -17px;
+    overflow-y: scroll;
+}
+
+.middleBox > div:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
 }
 
 .headOne {
     color: white;
-    letter-spacing: 1.0rem;
-    font-size: 2.5rem;
+    letter-spacing: 1.50rem;
+    font-size: 4rem;
 }
 
 .inputBox {
@@ -24,13 +66,13 @@
     border: none;
     outline: none;
     color: lightgray;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .round {
   display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.8em;
+  height: 1.8rem;
   background-image: linear-gradient(to bottom right, rgb(87, 209, 218), rgb(169, 89, 194));
   border-radius: 50%;
   /* border:1rem */
@@ -38,8 +80,8 @@
 
 .roundPlane {
     display: flex;
-    width: 1.0rem;
-    height: 1.0rem;
+    width: 1.8rem;
+    height: 1.8rem;
     border-radius: 50%;
     background-color: #25273c;
     border: solid;
@@ -49,8 +91,8 @@
 }
 
 .roundPlane:hover {
-    width: 1.0rem;
-    height: 1.0rem;
+    width: 1.8rem;
+    height: 1.8rem;
     background: linear-gradient(rgb(7, 5, 5), black) padding-box,
     linear-gradient(to bottom right, rgb(87, 209, 218), rgb(169, 89, 194)) border-box;
     border-radius: 50%;
@@ -68,12 +110,12 @@
 }
 
 .todoList:hover .todoBox {
-    width: 1.0rem;
-    height: 1.0rem;
+    width: 1.8rem;
+    height: 1.8rem;
     background-image: url("../public/img/icon-cross.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 1.3rem;
+    background-size: 2.0rem;
     background-color: #25273c;
     border: none;
     
@@ -98,10 +140,11 @@
     border-top: 0.05rem solid;
     flex-wrap: wrap;
     border-color: "#484a5f";
+    font-size: 1.5rem;
 }
 
 .statbox > div {
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .statbox > div:hover:nth-child(1){
@@ -123,3 +166,34 @@
 }
 
 
+
+
+@media screen and (max-width: 560px) {
+    .statbox > div:nth-child(2) {
+        display: none;
+    }
+
+    .newBox {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        color: #595a77;
+        background-color: #25273c;
+        justify-content: center;
+        font-size: 2rem;
+        gap: 2rem;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .newBox > div:hover {
+        color: white
+    }
+}
+
+@media screen and (min-width: 560px) {
+    .newBox {
+        display: none;
+    }
+}
