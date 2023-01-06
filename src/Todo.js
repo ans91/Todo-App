@@ -99,6 +99,7 @@ const Todo = ({ mode, setMode }) => {
       <div className={mode?"newBox":"newBox1"}
       style={{
         color: "#595a77",
+        // color: "red",
         backgroundColor: mode? "#25273c" : "white",
       }}>
         <div>All</div>

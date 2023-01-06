@@ -54,9 +54,9 @@ const TodoList = ({ todoArr, setTodoArr, setStatus, mode }) => {
                       src="/img/icon-check.svg"
                       alt="icon"
                       style={{
-                        paddingTop: "0.6rem",
-                        paddingLeft: "0.5rem",
-                        width: "1rem",
+                        paddingTop: "0.45rem",
+                        paddingLeft: "0.45rem",
+                        width: "1.8rem",
                       }}
                       />
                   </div>
