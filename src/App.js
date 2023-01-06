@@ -10,6 +10,7 @@ function App() {
        style={{
         alignItems: "flex-start",
         backgroundColor: mode?"black":"white",
+        backgroundImage: mode? "url(/img/bg_img_dark.jpg)" : "url(/img/bg_img_light.jpg)",
        }}>
        <Todo mode = {mode}
        setMode={setMode}/>

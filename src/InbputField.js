@@ -1,17 +1,25 @@
 import "./Todo.css";
+import React from 'react';
 
-const InputField = ({ msg, setMsg, todoArr, setTodoArr }) => {
+const InputField = ({ msg, setMsg, todoArr, setTodoArr, setCTodoArr, mode }) => {
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log(msg)
+    if (msg.detail !== "") {
     let tempArr = [...todoArr];
+    msg.flag = false;
     tempArr.push(msg);
     setTodoArr(tempArr);
-    setMsg("");
-    // console.log(tempmsg)
+    setCTodoArr(tempArr);
+    setMsg({detail: ""});
+    console.log(tempArr)
+    }
   };
 
-  console.log("Tigga", todoArr);
+  
+
+  // console.log("Tigga", todoArr);
 
   return (
     <div
@@ -22,31 +30,37 @@ const InputField = ({ msg, setMsg, todoArr, setTodoArr }) => {
         padding: "1.8rem",
       }}
     >
-      <div
+      {mode?<div
         className="roundPlane"
         style={{
           marginRight: "1.5rem",
+          backgroundColor: mode? "#25273c" : "white",
+        }}
+      ></div>:
+      <div
+        className="roundPlane1"
+        style={{
+          marginRight: "1.5rem",
+          backgroundColor: mode? "#25273c" : "white",
         }}
       ></div>
-      {/* <div className="round">
-        <img
-          src="/img/icon-check.svg"
-          style={{ paddingLeft: "0.4rem", paddingTop: "0.4rem" }}
-          alt="icon"
-          width={12}
-          height= {12}
-        />
-      </div> */}
-      <form className="Flexnox" onSubmit={handleSubmit}>
+      }
+
+      <form className="Flexbox" onSubmit={handleSubmit}>
         <input
           className="inputBox"
           placeholder="Create a new todo..."
           type="text"
-          value={msg}
-          onChange={(e) => setMsg(e.target.value)}
+          value={msg.detail}
+          onChange={(e) => setMsg({detail: e.target.value})}
+          style={{
+            backgroundColor: mode? "#25273c" : "white",
+            color: mode? "white" : "black"
+          }}
         ></input>
       </form>
     </div>
+
   );
 };
 
