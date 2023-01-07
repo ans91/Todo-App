@@ -11,6 +11,7 @@ function App() {
         alignItems: "flex-start",
         backgroundColor: mode?"black":"white",
         backgroundImage: mode? "url(/img/bg_img_dark.jpg)" : "url(/img/bg_img_light.jpg)",
+        backgroundSize: "100vw 40vh",
        }}>
        <Todo mode = {mode}
        setMode={setMode}/>
