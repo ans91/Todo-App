@@ -10,6 +10,21 @@ const Todo = ({ mode, setMode }) => {
   const [ctodoArr, setCTodoArr] = useState([]);
   const [status, setStatus] = useState(false);
   // console.log(todoArr[0])
+  const showAll = () => {
+    setTodoArr(ctodoArr)
+  }
+
+  const showActive = () => {
+    let tempArr = [...ctodoArr]
+    let active = tempArr.filter((item) => item.flag === false)
+    setTodoArr(active)
+  }
+
+  const showComplited = () => {
+    let tempArr = [...ctodoArr]
+    let compl = tempArr.filter((item) => item.flag === true)
+    setTodoArr(compl)
+  }
 
   return (
     <div className="mainbox">
@@ -102,9 +117,13 @@ const Todo = ({ mode, setMode }) => {
         // color: "red",
         backgroundColor: mode? "#25273c" : "white",
       }}>
-        <div>All</div>
-        <div>Active</div>
-        <div>Complited</div>
+        <div
+        onClick={()=>showAll()}
+        >All</div>
+        <div
+        onClick={()=>showActive()}>Active</div>
+        <div
+        onClick={()=>showComplited()}>Complited</div>
       </div>
     </div>
   );
