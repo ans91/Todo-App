@@ -41,10 +41,10 @@ const StatusBox = ({ setTodoArr, ctodoArr, todoArr, setCTodoArr, mode }) => {
         <div
         onClick={()=>showActive()}>Active</div>
         <div
-        onClick={()=>showComplited()}>Complited</div>
+        onClick={()=>showComplited()}>Completed</div>
       </div>
       <div className={mode? "lbox": "lbox1"}
-        onClick={()=>clearComplited()}>Clear Complited</div>
+        onClick={()=>clearComplited()}>Clear Completed</div>
     </div>
   );
 };

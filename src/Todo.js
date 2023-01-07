@@ -123,7 +123,7 @@ const Todo = ({ mode, setMode }) => {
         <div
         onClick={()=>showActive()}>Active</div>
         <div
-        onClick={()=>showComplited()}>Complited</div>
+        onClick={()=>showComplited()}>Completed</div>
       </div>
     </div>
   );
