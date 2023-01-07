@@ -3,7 +3,7 @@ import Todo from './Todo.js';
 import React, { useState } from 'react';
 
 function App() {
-  const [mode, setMode] = useState(false) 
+  const [mode, setMode] = useState(true) 
 
   return (
     <div className='mainBody'
